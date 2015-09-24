@@ -32038,13 +32038,13 @@ module Faker
           chosen = rand(instance_variable_get("@#{m}s"))
           name = chosen[0]
           set_yomi(name, chosen[1])
-          name
         end
       end
 
       def set_yomi(name, yomi)
         name.instance_variable_set('@yomi', yomi)
         def name.yomi; @yomi end
+        name
       end
 
       def rand(array)
